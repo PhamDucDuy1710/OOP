@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class J03004 {
+public class J03005 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -8,21 +8,20 @@ public class J03004 {
 
         while (t-- > 0) {
             String s = sc.nextLine().trim();
-            String[] words = s.split("\\s+");
+            String[] a = s.split("\\s+");
 
             StringBuilder res = new StringBuilder();
 
-            for (int i = 0; i < words.length; i++) {
-                String w = words[i].toLowerCase();
-                w = Character.toUpperCase(w.charAt(0)) + w.substring(1);
+            for (int i = 1; i < a.length; i++) {
+                String w = a[i].toLowerCase();
+                res.append(Character.toUpperCase(w.charAt(0)))
+                   .append(w.substring(1));
 
-                res.append(w);
-                if (i != words.length - 1) {
+                if (i != a.length - 1)
                     res.append(" ");
-                }
             }
 
-            System.out.println(res);
+            System.out.println(res + ", " + a[0].toUpperCase());
         }
 
         sc.close();
