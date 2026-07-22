@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class J01004 {
+public class tempCodeRunnerFile {
     public static boolean nt(int n) {
         if(n < 2) return false;
         for(int i = 2; i <= Math.sqrt(n); i++) {
