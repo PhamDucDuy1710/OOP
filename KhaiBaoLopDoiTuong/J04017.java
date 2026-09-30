@@ -60,5 +60,6 @@ public class J04017 {
             Matrix b = a.trans();
             System.out.println(a.mul(b));
         }
+        sc.close();
     }
 }
